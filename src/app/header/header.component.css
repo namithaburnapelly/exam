@@ -1,0 +1,22 @@
+.styleBar {
+    height: 7px;
+    background-color: deepskyblue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 16px;
+}
+
+#nav-container {
+    display: flex;
+    column-gap: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+    font-size: large;
+}

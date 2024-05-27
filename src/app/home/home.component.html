@@ -1,0 +1,23 @@
+<div class="main-container">
+    <div>
+        <button (click)="getAllProperties()">View All properties</button>
+    </div>
+    <div *ngIf="viewProperties">
+        <div *ngIf="properties.length!==0">
+            <h3>Available Properties</h3>
+            <div *ngFor="let property of properties">
+                <!-- <div (click)="getsellerDetails(property.name)" style="cursor: pointer;"> -->
+                <h3>Location: {{ property.location }}</h3>
+                <p>Area: {{ property.area }} sqft</p>
+                <p>Bedrooms: {{ property.bedrooms }}</p>
+                <p>Bathrooms: {{ property.bathrooms }}</p>
+                <p>Amenities: {{ property.amenities }}</p>
+                <!-- </div> -->
+            </div>
+        </div>
+        <!-- <ng-template #elseBlock>
+            <div id="elseBlock">No Available properties at this moment!</div>
+        </ng-template> -->
+    </div>
+
+</div>

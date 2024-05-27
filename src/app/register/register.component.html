@@ -1,0 +1,36 @@
+<div class="main-container">
+
+    <div>
+        <h3>User Registration</h3>
+    </div>
+
+    <form #userform="ngForm" (ngSubmit)="registerUser(userform.value)" class="form-main-container">
+        <div class="form-container">
+            <label for="firstName">First Name <span style="color: red;">*</span></label>
+            <input type="text" ngModel name="firstName" required />
+        </div>
+        <div class="form-container">
+            <label for="lastName">Last Name <span style="color: red;">*</span></label>
+            <input type="text" ngModel name="lastName" required />
+        </div>
+        <div class="form-container">
+            <label for="email">Email <span style="color: red;">*</span></label>
+            <input type="email" ngModel name="email" required />
+        </div>
+        <div class="form-container">
+            <label for="phone">Phone Number <span style="color: red;">*</span></label>
+            <input type="text" ngModel name="phone" required />
+        </div>
+        <div class="form-container">
+            <label for="userType">User Type <span style="color: red;">*</span></label>
+            <select ngModel name="userType" required>
+                <option value="seller">Seller</option>
+                <option value="buyer">Buyer</option>
+            </select>
+        </div>
+        <div>
+            <button>Register</button>
+        </div>
+    </form>
+
+</div>

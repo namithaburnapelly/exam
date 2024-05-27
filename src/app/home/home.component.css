@@ -1,0 +1,18 @@
+.main-container {
+    padding: 20px;
+}
+
+button {
+    background-color: grey;
+    border: grey 2px solid;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
+#elseBlock {
+    padding: 20px 0px;
+}
+
+.properties-container {
+    padding: 20px 0;
+}

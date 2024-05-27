@@ -1,0 +1,39 @@
+<div class="main-container">
+
+    <div>
+        <h3>New Property Details</h3>
+    </div>
+
+    <form #propertyform="ngForm" (ngSubmit)="registerProperty(propertyform.value)" class="form-main-container">
+        <div class="form-container">
+            <label for="sellerName">Seller Name <span style="color: red;">*</span></label>
+            <input type="text" ngModel name="sellerName" required />
+        </div>
+        <div class="form-container">
+            <label for="location">Location <span style="color: red;">*</span></label>
+            <input type="text" ngModel name="location" required />
+        </div>
+        <div class="form-container">
+            <label for="area">Area (sqft) <span style="color: red;">*</span></label>
+            <input type="text" ngModel name="area" required />
+        </div>
+        <div class="form-container">
+            <label for="bedrooms">No. of Bedrooms <span style="color: red;">*</span></label>
+            <input type="number" ngModel name="bedrooms" required />
+        </div>
+        <div class="form-container">
+            <label for="bathrooms">No. of Bathrooms <span style="color: red;">*</span></label>
+            <input type="number" ngModel name="bathrooms" required />
+
+        </div>
+        <div class="form-container">
+            <label for="amenities">Amenities <span style="color: red;">*</span></label>
+            <input type="text" ngModel name="amenities" required />
+
+        </div>
+        <div>
+            <button>Add Property</button>
+        </div>
+    </form>
+
+</div>

@@ -30,3 +30,8 @@ button {
 .sellerDetails {
     background-color: aliceblue;
 }
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}

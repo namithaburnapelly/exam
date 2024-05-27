@@ -1,0 +1,110 @@
+.form-main-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+h3 {
+    padding-bottom: 15px;
+}
+
+input,
+select {
+    width: 50vh;
+    background-color: aliceblue;
+    border: grey 1px solid;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+label {
+    font-weight: 500;
+}
+
+#submit {
+    background-color: rgb(1, 149, 198);
+    border: rgb(1, 149, 198) 2px solid;
+    border-radius: 4px;
+    padding: 5px 16px 5px;
+    color: white;
+    font-weight: 400;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.form {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid deepskyblue;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    color: darkblue;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Edit button style */
+.edit-button {
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    color: #ffffff;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-button:hover {
+    background-color: #46a04a;
+    border: 2px solid #46a04a;
+}
+
+/* Delete button style */
+.delete-button {
+    background-color: #F44336;
+    border: 2px solid #F44336;
+    color: #ffffff;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Delete button hover effect */
+.delete-button:hover {
+    background-color: #f21c0d;
+    border: 2px solid #F44336;
+}

@@ -11,6 +11,7 @@ import { PropertyComponent } from './property/property.component'
 import { DataService } from './data.service';
 import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SellerPropertiesComponent } from './seller-properties/seller-properties.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PropertyComponent,
     HeaderComponent,
     PageNotFoundComponent,
+    SellerPropertiesComponent,
   ],
   imports: [
     BrowserModule,

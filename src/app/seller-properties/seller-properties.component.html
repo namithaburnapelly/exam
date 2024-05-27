@@ -1,0 +1,85 @@
+<div style="padding: 20px;">
+
+    <div>
+        <input type="text" #name placeholder="Your FirstName">
+        <button (click)="getsellerProperties(name.value)" style="background-color: deepskyblue;
+                margin-left: 10px; border: deepskyblue solid 1px; padding: 5px; border-radius: 4px;
+        ">get my
+            properties</button>
+    </div>
+
+    <div *ngIf="viewdata" style="padding: 30px 10px;">
+
+        <div *ngIf="properties.length!==0; else elseBlock">
+            <h3>Your Properties</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Area</th>
+                        <th>Bedrooms</th>
+                        <th>Bathrooms</th>
+                        <th>Amenities</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let property of properties">
+                        <td>{{ property.location }}</td>
+                        <td>{{ property.area }}</td>
+                        <td>{{ property.bedrooms }}</td>
+                        <td>{{ property.bathrooms }}</td>
+                        <td>{{ property.amenities }}</td>
+                        <td class="options">
+                            <button (click)="editProperty(property)" class="edit-button">Edit</button>
+                            <button (click)="deleteProperty(property._id, property.sellerName)"
+                                class="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ng-template #elseBlock>
+            <div>looks like you have no properties</div>
+        </ng-template>
+
+    </div>
+    <div *ngIf="selectedProperty" class="form">
+
+        <h3>Update Property</h3>
+        <form #propertyform="ngForm" (ngSubmit)="updateProperty(selectedProperty.sellerName)"
+            class="form-main-container">
+            <div class="form-container">
+                <label for="sellerName">Seller Name <span style="color: red;">*</span></label>
+                <input type="text" [(ngModel)]="selectedProperty.sellerName" name="sellerName" required />
+            </div>
+            <div class="form-container">
+                <label for="location">Location <span style="color: red;">*</span></label>
+                <input type="text" [(ngModel)]="selectedProperty.location" name="location" required />
+            </div>
+            <div class="form-container">
+                <label for="area">Area (sqft) <span style="color: red;">*</span></label>
+                <input type="text" [(ngModel)]="selectedProperty.area" name="area" required />
+            </div>
+            <div class="form-container">
+                <label for="bedrooms">No. of Bedrooms <span style="color: red;">*</span></label>
+                <input type="number" [(ngModel)]="selectedProperty.bedrooms" name="bedrooms" required />
+            </div>
+            <div class="form-container">
+                <label for="bathrooms">No. of Bathrooms <span style="color: red;">*</span></label>
+                <input type="number" [(ngModel)]="selectedProperty.bathrooms" name="bathrooms" required />
+
+            </div>
+            <div class="form-container">
+                <label for="amenities">Amenities <span style="color: red;">*</span></label>
+                <input type="text" [(ngModel)]="selectedProperty.amenities" name="amenities" required />
+
+            </div>
+            <div>
+                <button id="submit">Update Property</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>

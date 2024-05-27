@@ -13,8 +13,10 @@ export class RegisterComponent {
   constructor(private dataService: DataService, private router: Router) { }
 
   registerUser(values: User) {
-    this.dataService.registerUser(values)
-    console.log('user registered', values)
+    this.dataService.registerUser(values).subscribe(user=>{
+
+      console.log('user registered', user)
+    })
     alert("New user suceessfully added")
     this.router.navigateByUrl('/')
   }

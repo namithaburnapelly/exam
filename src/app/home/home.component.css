@@ -24,4 +24,9 @@ button {
     height: fit-content;
     padding: 10px;
     margin: 4px;
+    cursor: pointer;
+}
+
+.sellerDetails {
+    background-color: aliceblue;
 }

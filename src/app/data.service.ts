@@ -46,7 +46,7 @@ export class DataService {
     return this.http.get<Property[]>(`${this.url}/properties`)
   }
 
-  getsellerDetails(name: string) {
-    return this.http.get(`${this.url}/getuser/${name}`)
+  getsellerDetails(name: string): Observable<User[]> {
+    return this.http.get<User[]>(`${this.url}/getuser/${name}`)
   }
 }

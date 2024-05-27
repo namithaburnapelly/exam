@@ -8,7 +8,6 @@
             <div style="display: flex;">
                 <div *ngFor="let property of properties" class="property-card"
                     (click)="getsellerDetails(property.sellerName)">
-                    <!-- <div (click)="getsellerDetails(property.name)" style="cursor: pointer;"> -->
                     <table>
                         <tr>
                             <th>seller Name:</th>
@@ -35,9 +34,25 @@
                             <td>{{ property.amenities }}</td>
                         </tr>
                     </table>
-                    <!-- </div> -->
                 </div>
             </div>
+        </div>
+        <div *ngIf="viewSellerDetails" style="padding: 10px;">
+            <table *ngFor="let seller of sellerDetails" class="sellerDetails">
+                <tr>
+                    <th>Seller Full Name:</th>
+                    <td>{{ seller.firstName }} {{seller.lastName}}</td>
+                </tr>
+                <tr>
+                    <th>Contact No:</th>
+                    <td>{{ seller.phone }}</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td>{{ seller.email }}</td>
+                </tr>
+
+            </table>
         </div>
         <ng-template #elseBlock>
             <div id="elseBlock">No Available properties at this moment!</div>

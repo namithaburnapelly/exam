@@ -21,4 +21,10 @@ export class HomeComponent {
     })
     this.viewProperties = !this.viewProperties
   }
+
+  getsellerDetails(name: string) {
+    this.dataService.getsellerDetails(name).subscribe(values => {
+      console.log(values)
+    })
+  }
 }

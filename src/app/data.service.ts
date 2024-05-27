@@ -9,7 +9,7 @@ import { User } from './user';
 })
 export class DataService {
 
-  public url = "http://localhost:3000"
+  public url = "https://exam-server-0esq.onrender.com"
 
   constructor(private http: HttpClient) { }
 
